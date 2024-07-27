@@ -15,7 +15,7 @@ const projectData = [
     name: "Followmebet",
     type: "React",
     ProjectInfo:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam doloremque similique, quae voluptatum debitis ipsa autem dolorem voluptate doloribus neque.",
+     "Followmebet is a dynamic betting platform built with React. It offers a user-friendly interface for placing bets on various sports events. I was responsible for developing the frontend.",
     technologyUsed: "Technologies Used",
     technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "http://followmebet.com.ng/",
@@ -26,7 +26,7 @@ const projectData = [
     name: "Comfy Store",
     type: "React",
     ProjectInfo:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam doloremque similique, quae voluptatum debitis ipsa autem dolorem voluptate doloribus neque.',
+      "Comfy Store is an e-commerce website created using React and Tailwind CSS. As a full-stack developer, I designed and implemented the entire application, including product listings, shopping cart, and checkout functionality.",
     technologyUsed: "Technologies Used",
     technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "https://isaac-comfy-storee.netlify.app/",
@@ -37,7 +37,7 @@ const projectData = [
     name: "Airtime project",
     type: "React",
     ProjectInfo:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam doloremque similique, quae voluptatum debitis ipsa autem dolorem voluptate doloribus neque.",
+     "A React-based application that allows users to purchase airtime for various mobile networks. I developed the frontend, integrated with payment gateways, and implemented features like order history and notifications.",
     technologyUsed: "Technologies Used",
     technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "https://airtime22.netlify.app/",
@@ -48,7 +48,7 @@ const projectData = [
     name: "Color Generator",
     type: "React",
     ProjectInfo:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam doloremque similique, quae voluptatum debitis ipsa autem dolorem voluptate doloribus neque.',
+       "A simple yet fun color generator built with React and Tailwind CSS. Users can generate random color combinations and copy the generated hex codes. I focused on creating a visually appealing and user-friendly interface.",
     technologyUsed: "Technologies Used",
     technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "https://thriving-hamster-88791a.netlify.app/",
@@ -59,7 +59,7 @@ const projectData = [
     name: "Guess Number",
     type: "Javascript",
     ProjectInfo:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam doloremque similique, quae voluptatum debitis ipsa autem dolorem voluptate doloribus neque.',
+       "A classic or great number guessing game implemented using JavaScript. I created a responsive design and added features like difficulty levels and high score tracking.",
     technologyUsed: "Technologies Used",
     technology: [ "images/js.png", ],
     url: "https://guesting-game.netlify.app/",
@@ -70,7 +70,7 @@ const projectData = [
     name: "Product Display",
     type: "React",
     ProjectInfo:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam doloremque similique, quae voluptatum debitis ipsa autem dolorem voluptate doloribus neque.',
+     "A product showcase website built with React and Tailwind CSS. I designed and developed the layout, integrated a product database, and implemented features like product search and filtering.",
     technologyUsed: "Technologies Used",
     technology: [ "images/react.png", "images/js.png", "images/tailwind.png"],
     url: "https://samuelexx.netlify.app/",
@@ -81,7 +81,7 @@ const projectData = [
     name: "Mix Master",
     type: "React",
     ProjectInfo:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam doloremque similique, quae voluptatum debitis ipsa autem dolorem voluptate doloribus neque.',
+       "A music mixing application built with React. Users can upload their own tracks and mix them together. I developed the frontend, implemented audio mixing functionalities, and integrated with a cloud storage solution.",
     technologyUsed: "Technologies Used",
     technology: [ "images/react.png", "images/js.png", "images/tailwind.png"],
     url: "https://samuelexx.netlify.app/",
