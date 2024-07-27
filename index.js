@@ -15,7 +15,7 @@ const projectData = [
     name: "Followmebet",
     type: "React",
     ProjectInfo:
-     "Followmebet is a dynamic betting platform built with React. It offers a user-friendly interface for placing bets on various sports events. I was responsible for developing the frontend.",
+      "Followmebet is a dynamic betting platform built with React. It offers a user-friendly interface for placing bets on various sports events. I was responsible for developing the frontend.",
     technologyUsed: "Technologies Used",
     technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "http://followmebet.com.ng/",
@@ -37,7 +37,7 @@ const projectData = [
     name: "Airtime project",
     type: "React",
     ProjectInfo:
-     "A React-based application that allows users to purchase airtime for various mobile networks. I developed the frontend, integrated with payment gateways, and implemented features like order history and notifications.",
+      "A React-based application that allows users to purchase airtime for various mobile networks. I developed the frontend, integrated with payment gateways, and implemented features like order history and notifications.",
     technologyUsed: "Technologies Used",
     technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "https://airtime22.netlify.app/",
@@ -48,7 +48,7 @@ const projectData = [
     name: "Color Generator",
     type: "React",
     ProjectInfo:
-       "A simple yet fun color generator built with React and Tailwind CSS. Users can generate random color combinations and copy the generated hex codes. I focused on creating a visually appealing and user-friendly interface.",
+      "A simple yet fun color generator built with React and Tailwind CSS. Users can generate random color combinations and copy the generated hex codes. I focused on creating a visually appealing and user-friendly interface.",
     technologyUsed: "Technologies Used",
     technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "https://thriving-hamster-88791a.netlify.app/",
@@ -59,9 +59,9 @@ const projectData = [
     name: "Guess Number",
     type: "Javascript",
     ProjectInfo:
-       "A classic or great number guessing game implemented using JavaScript. I created a responsive design and added features like difficulty levels and high score tracking.",
+      "A classic or great number guessing game implemented using JavaScript. I created a responsive design and added features like difficulty levels and high score tracking.",
     technologyUsed: "Technologies Used",
-    technology: [ "images/js.png", ],
+    technology: ["images/js.png"],
     url: "https://guesting-game.netlify.app/",
   },
   {
@@ -70,9 +70,9 @@ const projectData = [
     name: "Product Display",
     type: "React",
     ProjectInfo:
-     "A product showcase website built with React and Tailwind CSS. I designed and developed the layout, integrated a product database, and implemented features like product search and filtering.",
+      "A product showcase website built with React and Tailwind CSS. I designed and developed the layout, integrated a product database, and implemented features like product search and filtering.",
     technologyUsed: "Technologies Used",
-    technology: [ "images/react.png", "images/js.png", "images/tailwind.png"],
+    technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "https://samuelexx.netlify.app/",
   },
   {
@@ -81,9 +81,9 @@ const projectData = [
     name: "Mix Master",
     type: "React",
     ProjectInfo:
-       "A music mixing application built with React. Users can upload their own tracks and mix them together. I developed the frontend, implemented audio mixing functionalities, and integrated with a cloud storage solution.",
+      "A music mixing application built with React. Users can upload their own tracks and mix them together. I developed the frontend, implemented audio mixing functionalities, and integrated with a cloud storage solution.",
     technologyUsed: "Technologies Used",
-    technology: [ "images/react.png", "images/js.png", "images/tailwind.png"],
+    technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "https://samuelexx.netlify.app/",
   },
 ];
@@ -103,12 +103,17 @@ document.addEventListener("DOMContentLoaded", () => {
   links.forEach((link) => {
     link.addEventListener("click", setActiveLink);
   });
+  openBtn.addEventListener("click", () => {
+    aside.style.transform = `translateX(0)`;
+  });
 
-  // Add event listeners to filter buttons
+  closeBtn.addEventListener("click", () => {
+    aside.style.transform = `translateX(-200rem)`;
+  });
   filterButtons.forEach((button) => {
-    button.addEventListener("click", function() {
-      filterButtons.forEach(btn => btn.classList.remove("active")); // Remove active class from all buttons
-      this.classList.add("active"); // Add active class to the clicked button
+    button.addEventListener("click", function () {
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
 
       const filterType = this.getAttribute("data-filter");
       filterProjects(filterType);
@@ -123,7 +128,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (type === "all") {
       displayProjects(projectData);
     } else {
-      const filteredProjects = projectData.filter(project => project.type === type);
+      const filteredProjects = projectData.filter(
+        (project) => project.type === type
+      );
       displayProjects(filteredProjects);
     }
   }
@@ -137,9 +144,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${project.ProjectInfo}</p>
           <h2>${project.technologyUsed}</h2>
           <div class="skills">
-            ${project.technology.map(
-              (image) => `<img src="${image}" alt="${image.split("/").pop().split(".")[0]}" />`
-            ).join("")}
+            ${project.technology
+              .map(
+                (image) =>
+                  `<img src="${image}" alt="${
+                    image.split("/").pop().split(".")[0]
+                  }" />`
+              )
+              .join("")}
           </div>
           <div class="btn-container">
             <a href="${project.url}" target="_blank">
@@ -153,6 +165,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   displayProjects(projectData);
 });
+function closeButton() {
+  closeBtn.addEventListener("click", () => {
+    aside.style.transform = `translateX(-200rem)`;
+  });
+}
+closeButton();
+function openButton(){
+  openBtn.addEventListener("click", () => {
+  aside.style.transform = `translateX(200rem)`;
+});
+}
+openButton()
+document.querySelector("#whatsapp").setAttribute("href", phone);
+document.addEventListener("click", closeButton);
 
 function sendEmail() {
   const bodyMsg = `Full Name: ${fullName.value}<br>Email: ${email.value}<br>Message: ${message.value}`;
@@ -207,5 +233,4 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-document.querySelector("#whatsapp").setAttribute("href", phone);
-AOS.init()
+

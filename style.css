@@ -56,6 +56,7 @@ aside ul {
   display: grid !important;
   place-content: center;
   height: 100%;
+  gap:1rem
 }
 .close {
   position: absolute;
@@ -204,13 +205,11 @@ button {
   border-bottom: 1px solid #55e5a4;
 }
 .project-container {
-  margin:0 auto;
   margin-top: 3rem;
   display: flex;
   justify-content: center;
   gap: 4rem;
   flex-wrap: wrap;
-  max-width: 100rem;
 }
 .btn-container {
   display: flex;
@@ -337,21 +336,7 @@ footer ul {
 footer ul li a {
   color: #e3e3e3;
 }
-.filter-btns{
-  display: flex;
-  flex-wrap: wrap;
-  gap:1rem
-}
-.filter-btn {
-  background-color: #fff; 
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-.filter-btn.active {
-  background-color: #55e5a4; 
-  color: #fff; 
-}
+
 
 
 @media only screen and (min-width: 1100px) {
@@ -414,5 +399,20 @@ footer ul li a {
     height:30rem!important
   }
 }
+.filter-btns{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1rem
+}
+.filter-btn {
+  background-color: #fff; 
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.filter-btn.active {
+  background-color: #55e5a4; 
+  color: #fff; 
 
+}
 
