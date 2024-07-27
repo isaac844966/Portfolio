@@ -8,6 +8,12 @@ const fullName = document.getElementById("name");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
 const items = document.querySelectorAll(".item");
+const links = document.querySelectorAll("nav ul li a");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const phoneWhatsapp = document.querySelector("#whatsapp")
+phoneWhatsapp.setAttribute("href", phone);
+
+
 const projectData = [
   {
     id: crypto.randomUUID(),
@@ -88,55 +94,45 @@ const projectData = [
   },
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll("nav ul li a");
-  const filterButtons = document.querySelectorAll(".filter-btn");
-
-  function setActiveLink() {
-    links.forEach((link) => {
-      link.parentElement.classList.remove("active");
-      aside.style.transform = `translateX(-200rem)`;
-    });
-    this.parentElement.classList.add("active");
-  }
-
+function setActiveLink() {
   links.forEach((link) => {
-    link.addEventListener("click", setActiveLink);
-  });
-  openBtn.addEventListener("click", () => {
-    aside.style.transform = `translateX(0)`;
-  });
-
-  closeBtn.addEventListener("click", () => {
+    link.parentElement.classList.remove("active");
     aside.style.transform = `translateX(-200rem)`;
   });
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      filterButtons.forEach((btn) => btn.classList.remove("active"));
-      this.classList.add("active");
+  this.parentElement.classList.add("active");
+}
 
-      const filterType = this.getAttribute("data-filter");
-      filterProjects(filterType);
-    });
+links.forEach((link) => {
+  link.addEventListener("click", setActiveLink);
+});
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    filterButtons.forEach((btn) => btn.classList.remove("active"));
+    this.classList.add("active");
+
+    const filterType = this.getAttribute("data-filter");
+    filterProjects(filterType);
   });
+});
 
-  function displayProjects(projects) {
-    projectsContainer.innerHTML = projects.map(generateProjectHTML).join("");
+function displayProjects(projects) {
+  projectsContainer.innerHTML = projects.map(generateProjectHTML).join("");
+}
+
+function filterProjects(type) {
+  if (type === "all") {
+    displayProjects(projectData);
+  } else {
+    const filteredProjects = projectData.filter(
+      (project) => project.type === type
+    );
+    displayProjects(filteredProjects);
   }
+}
 
-  function filterProjects(type) {
-    if (type === "all") {
-      displayProjects(projectData);
-    } else {
-      const filteredProjects = projectData.filter(
-        (project) => project.type === type
-      );
-      displayProjects(filteredProjects);
-    }
-  }
-
-  function generateProjectHTML(project) {
-    return `
+function generateProjectHTML(project) {
+  return `
       <div class="project ">
         <img src="${project.image}" alt="project" />
         <div class="content">
@@ -161,25 +157,23 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
     `;
-  }
+}
 
-  displayProjects(projectData);
-});
+displayProjects(projectData);
+
 function closeButton() {
   closeBtn.addEventListener("click", () => {
     aside.style.transform = `translateX(-200rem)`;
   });
 }
 closeButton();
-function openButton(){
+function openButton() {
   openBtn.addEventListener("click", () => {
-  aside.style.transform = `translateX(200rem)`;
-});
+    aside.style.transform = `translateX(0)`;
+  });
 }
-openButton()
-document.querySelector("#whatsapp").setAttribute("href", phone);
+openButton();
 document.addEventListener("click", closeButton);
-
 function sendEmail() {
   const bodyMsg = `Full Name: ${fullName.value}<br>Email: ${email.value}<br>Message: ${message.value}`;
   Email.send({
@@ -232,5 +226,3 @@ form.addEventListener("submit", (e) => {
     fullName.value = email.value = message.value = "";
   }
 });
-
-
