@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bioko Isaac</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <main id="main-section">
+        <nav>
+          <a href="#home" class="logo">Isaac</a>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <span class="material-symbols-outlined menu">menu</span>
+          <aside>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <span class="material-symbols-outlined close">close</span>
+          </aside>
+        </nav>
+        <section id="home">
+          <div class="left">
+            <h3>Bioko Isaac</h3>
+            <h1>Full Stack Developer</h1>
+            <p>
+              I am a passionate and dedicated full-stack developer with a keen
+              interest in building dynamic and responsive web applications. My
+              journey in technology has equipped me with a diverse skill set,
+              allowing me to work on both the front-end and back-end of
+              projects. I thrive on solving complex problems and turning ideas
+              into reality through code. Whether it's crafting user-friendly
+              interfaces or optimizing server-side functionality, I am committed
+              to delivering high-quality solutions that exceed client
+              expectations.
+            </p>
+            <div class="buttons">
+              <button>Get in Touch</button>
+              <li>Available now</li>
+            </div>
+          </div>
+          <div class="img-container">
+            <img src="images/me.png" alt="" />
+          </div>
+        </section>
+      </main>
+      <section id="about">
+        <div class="content-about">
+          <h1>About Me <br /><span>Who Am I?</span></h1>
+          <p>
+            As a full-stack developer, I specialize in creating seamless and
+            efficient web applications that provide exceptional user
+            experiences. My expertise spans various technologies, including
+            React, JavaScript, TypeScript, Node.js, and Tailwind CSS. I am
+            always eager to learn and adapt to new trends in technology,
+            ensuring that I can provide the best solutions for any project. I
+            believe in the power of collaboration and am dedicated to working
+            closely with clients and team members to bring visions to life.
+          </p>
+          <div class="skills">
+            <img src="images/react.png" alt="react" />
+            <img src="images/js.png" alt="javascript" />
+            <img src="images/tailwind.png" alt="tailwind" />
+            <img src="images/typescript.png" alt="typescript" />
+            <img src="images/node.png" alt="node" />
+          </div>
+        </div>
+        <div class="img-container">
+          <img src="images/me.png" alt="" class="about-img" />
+        </div>
+      </section>
+      <section  id="projects"  >
+        <div class="btn-container filter-btns">
+          <button class="filter-btn active" data-filter="all">ALL Projects</button>
+          <button class="filter-btn" data-filter="React">React</button>
+          <button class="filter-btn" data-filter="Javascript">Javascript</button>
+        </div>
+        <div class="project-container" ></div>
+      </section>
+      
+      <section id="contact">
+        <h1>Get In Touch</h1>
+        <div class="contact-container">
+          <div class="contact-content">
+            <h2>
+              Let’s discuss <br />
+              on something cool together
+            </h2>
+          </div>
+          <div class="form-container">
+            <p>I’m interested in...</p>
+            <form>
+              <div class="input-field field">
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  id="name"
+                  autocomplete="off"
+                  class="item"
+                />
+                <div class="error-text">Full Name can't be blank</div>
+              </div>
+              <div class="input-field field">
+                <input
+                  type="email"
+                  placeholder="Enter your Email"
+                  id="email"
+                  autocomplete="off"
+                  class="item"
+                />
+                <div class="error-text">Email can't be blank</div>
+              </div>
+              <div class="input-field field">
+                <textarea
+                  name=""
+                  placeholder="Message"
+                  id="message"
+                  autocomplete="off"
+                  class="item"
+                ></textarea>
+                <div class="error-text">Message can't be blank</div>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <a href="#home" class="logo">Isaac</a>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </footer>
+      <a id="whatsapp" href="" target="_blank" rel="noopener noreferrer">
+        <img class="whatsapp" src="images/whatsapp.jfif" alt="whatsapp" />
+      </a>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="index.js"></script>
+  </body>
+</html>
