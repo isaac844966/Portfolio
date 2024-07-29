@@ -10,9 +10,8 @@ const message = document.getElementById("message");
 const items = document.querySelectorAll(".item");
 const links = document.querySelectorAll("nav ul li a");
 const filterButtons = document.querySelectorAll(".filter-btn");
-const phoneWhatsapp = document.querySelector("#whatsapp")
+const phoneWhatsapp = document.querySelector("#whatsapp");
 phoneWhatsapp.setAttribute("href", phone);
-
 
 const projectData = [
   {
@@ -43,7 +42,7 @@ const projectData = [
     name: "Airtime project",
     type: "React",
     ProjectInfo:
-      "A React-based application that allows users to purchase airtime for various mobile networks. I developed the frontend, integrated with payment gateways, and implemented features like order history and notifications.",
+      "A React-based application that allows users to purchase airtime for various mobile networks. I developed the Landing page. Integrated with payment gateways, and implemented features like order history and notifications would be implemented later in the future.",
     technologyUsed: "Technologies Used",
     technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "https://airtime22.netlify.app/",
@@ -76,7 +75,7 @@ const projectData = [
     name: "Product Display",
     type: "React",
     ProjectInfo:
-      "A product showcase website built with React and Tailwind CSS. I designed and developed the layout, integrated a product database, and implemented features like product search and filtering.",
+      "A product showcase website built with React and Tailwind CSS. I designed and developed the layout, and i implemented features like product filtering.",
     technologyUsed: "Technologies Used",
     technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "https://samuelexx.netlify.app/",
