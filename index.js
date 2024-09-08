@@ -91,6 +91,23 @@ const projectData = [
     technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "https://samuelexx.netlify.app/",
   },
+  {
+    id: crypto.randomUUID(),
+    image: "images/furniconnect.png",
+    name: "FurniConnect",
+    type: "Node",
+    ProjectInfo:
+      "A furniure application built with React, Node and MongoDB. Where users can buy furnitures and also  upload their own furniture. I developed the frontend, and backend, and integrated with paystack for making payment .",
+    technologyUsed: "Technologies Used",
+    technology: [
+      "images/react.png",
+      "images/js.png",
+      "images/tailwind.png",
+      "images/node.png",
+      "images/mongodb.png",
+    ],
+    url: "https://furniconnect.netlify.app/",
+  },
 ];
 
 function setActiveLink() {
