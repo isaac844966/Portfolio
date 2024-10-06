@@ -20,7 +20,7 @@ const projectData = [
     name: "Followmebet",
     type: "React",
     ProjectInfo:
-      "Followmebet is a dynamic betting platform built with React. It offers a user-friendly interface for placing bets on various sports events. I was responsible for developing the frontend.",
+      "Followmebet is a dynamic betting platform. It offers a user-friendly interface for placing bets on various sports events. I was responsible for developing the website showcasing infomation about the application.",
     technologyUsed: "Technologies Used",
     technology: ["images/react.png", "images/js.png", "images/tailwind.png"],
     url: "http://followmebet.com.ng/",
